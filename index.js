@@ -47,7 +47,7 @@ const questions = [
 function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
-fs.appendFile("README.md", "Prompt answers?", function (err) {
+fs.appendFile("README.md", function (err) {
   if (err) {
     console.log(err);
   }
