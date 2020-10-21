@@ -7,6 +7,11 @@ const path = require("path");
 const questions = [
   {
     type: "input",
+    name: "name",
+    message: "What is your name?",
+  },
+  {
+    type: "input",
     name: "title",
     message: "What is your project called?",
   },
@@ -17,29 +22,29 @@ const questions = [
   },
   {
     type: "input",
-    message: "How do you install your application?",
     name: "installation",
+    message: "How do you install your application?",
   },
   {
     type: "input",
-    message: "How do you use your application?",
     name: "usage",
+    message: "How do you use your application?",
   },
   {
     type: "list",
-    message: "What kind of license would you like to add to your application?",
     name: "license",
+    message: "What kind of license would you like to add to your application?",
     choices: ["MIT", "Apache2.0"],
   },
   {
     type: "input",
-    message: "What is your GitHub username?",
     name: "gitHub",
+    message: "What is your GitHub username?",
   },
   {
     type: "input",
-    message: "What is your email address?",
     name: "email",
+    message: "What is your email address?",
   },
 ];
 
@@ -47,7 +52,7 @@ const questions = [
 function writeToFile(fileName, data) {
   return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
-fs.appendFile("README.md", function (err) {
+fs.appendFile("README.md", "This is my ReadMe", function (err) {
   if (err) {
     console.log(err);
   }
